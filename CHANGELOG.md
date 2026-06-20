@@ -1,3 +1,22 @@
+## [2.4.0] - 2026-06-21
+
+### Features
+
+- re-upload / download buttons for settings sync (obsidian)
+- notify-driven settings sync + indicator activity (obsidian)
+
+### Bug Fixes
+
+- reissue notify subscription on reconnect (core)
+- persist session on every refresh to survive token rotation (account)
+- hash settings-sync fileId to stop leaking .obsidian paths (core)
+
+### Other
+
+- bump version to 2.4.0 (obsidian)
+- rename secret keys to rhyolite-vault-key / rhyolite-auth-token (obsidian)
+
+
 ## [2.3.0] - 2026-06-20
 
 ### Features
