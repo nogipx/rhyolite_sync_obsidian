@@ -1,3 +1,31 @@
+## [2.6.0] - 2026-07-02
+
+### Features
+
+- map external_storage_unavailable rejection (obsidian)
+- enable External Storage (BYO) for self-host (obsidian)
+- gate External Storage to managed Pro tier (obsidian)
+- self-host UX in settings tab (obsidian)
+- self-host mode in the plugin (obsidian)
+- IVaultDirectory seam (managed + self-host) (obsidian)
+- vault registry contract (core)
+
+### Bug Fixes
+
+- bound self-host registry connect + reset vault on edition switch (obsidian)
+- keep self-host token on config rebuild + fix offref crash (obsidian)
+- apply self-host without manual reload + never prompt account (obsidian)
+
+### Refactoring
+
+- move shared auth surface into engine (core)
+
+### Other
+
+- bump version to 2.6.0 (obsidian)
+- bump rpc_dart to d5a665e (core)
+
+
 ## [2.5.0] - 2026-06-22
 
 ### Features
