@@ -1,0 +1,109 @@
+x-rpc-ref: &rpc-ref d5a665eff8f7e6ee5552010d8965ce198450b002
+
+name: rhyolite_sync_public
+publish_to: none
+
+environment:
+  sdk: ^3.11.0
+
+# The open (AGPL) subset of Rhyolite: the sync engine, the self-host server
+# and its shared composition, the Obsidian client, and the auth/promo client
+# contracts. The managed server, account server, and promo server (billing /
+# multi-tenant policy) are NOT part of this repository.
+workspace:
+  - packages/rhyolite_sync
+  - packages/rhyolite_sync_server
+  - packages/server/rhyolite_sync_server_runtime
+  - packages/server/rhyolite_sync_server_selfhost
+  - packages/server/rhyolite_observability
+  - packages/client/rhyolite_client_obsidian
+  - packages/client/rhyolite_client_account
+  - packages/client/rpc_promo
+
+dependency_overrides:
+  convergent: ^0.4.1
+
+  # Core
+  rpc_dart:
+    git:
+      url: https://github.com/nogipx/rpc_dart
+      path: packages/core/rpc_dart
+      ref: *rpc-ref
+  rpc_dart_compression:
+    git:
+      url: https://github.com/nogipx/rpc_dart
+      path: packages/core/rpc_dart_compression
+      ref: *rpc-ref
+  rpc_dart_framework:
+    git:
+      url: https://github.com/nogipx/rpc_dart
+      path: packages/core/rpc_dart_framework
+      ref: *rpc-ref
+  rpc_dart_log:
+    git:
+      url: https://github.com/nogipx/rpc_dart
+      path: packages/core/rpc_dart_log
+      ref: *rpc-ref
+  rpc_dart_opentelemetry:
+    git:
+      url: https://github.com/nogipx/rpc_dart
+      path: packages/core/rpc_dart_opentelemetry
+      ref: *rpc-ref
+
+  # Transport
+  rpc_dart_http:
+    git:
+      url: https://github.com/nogipx/rpc_dart
+      path: packages/transport/rpc_dart_http
+      ref: *rpc-ref
+  rpc_dart_websocket:
+    git:
+      url: https://github.com/nogipx/rpc_dart
+      path: packages/transport/rpc_dart_websocket
+      ref: *rpc-ref
+
+  # Data
+  rpc_data:
+    git:
+      url: https://github.com/nogipx/rpc_dart
+      path: packages/data/rpc_data
+      ref: *rpc-ref
+  rpc_data_sqlite:
+    git:
+      url: https://github.com/nogipx/rpc_dart
+      path: packages/data/rpc_data_sqlite
+      ref: *rpc-ref
+  rpc_data_postgres:
+    git:
+      url: https://github.com/nogipx/rpc_dart
+      path: packages/data/rpc_data_postgres
+      ref: *rpc-ref
+
+  # Blob
+  rpc_blob:
+    git:
+      url: https://github.com/nogipx/rpc_dart
+      path: packages/blob/rpc_blob
+      ref: *rpc-ref
+  rpc_blob_sqlite:
+    git:
+      url: https://github.com/nogipx/rpc_dart
+      path: packages/blob/rpc_blob_sqlite
+      ref: *rpc-ref
+  rpc_blob_minio:
+    git:
+      url: https://github.com/nogipx/rpc_dart
+      path: packages/blob/rpc_blob_minio
+      ref: *rpc-ref
+
+  # Notify
+  rpc_notify:
+    git:
+      url: https://github.com/nogipx/rpc_dart
+      path: packages/notify/rpc_notify
+      ref: *rpc-ref
+  rpc_notify_postgres:
+    git:
+      url: https://github.com/nogipx/rpc_dart
+      path: packages/notify/rpc_notify_postgres
+      ref: *rpc-ref

@@ -1,0 +1,18 @@
+name: rhyolite_observability
+description: OpenTelemetry observability setup for Rhyolite services.
+version: 0.1.0
+publish_to: none
+
+resolution: workspace
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  rpc_dart: ^4.2.0
+  rpc_dart_opentelemetry:
+    git:
+      url: https://github.com/nogipx/rpc_dart
+      path: packages/core/rpc_dart_opentelemetry
+      ref: rpc_dart-2.6.2
+  opentelemetry: ^0.18.11

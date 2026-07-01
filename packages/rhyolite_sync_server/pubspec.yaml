@@ -1,0 +1,24 @@
+name: rhyolite_sync_server
+description: Δ-state CRDT sync server-side responders (pure library).
+version: 1.0.0
+publish_to: none
+
+resolution: workspace
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  convergent: any
+  rhyolite_sync: any
+
+  rpc_dart: any
+  rpc_dart_framework: any
+  rpc_data: any
+  rpc_blob: any
+  rpc_notify: any
+  uuid: ^4.5.1
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.25.6
